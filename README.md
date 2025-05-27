@@ -1,4 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ADHD Voice Assistant App
+
+A web app that lets users manage tasks (create, edit, delete, mark as done, break down into subtasks, estimate completion time) using only their voice. Uses OpenAI Whisper for speech-to-text, OpenAI GPT for intent parsing, OpenAI TTS for text-to-speech, and Airtable as the backend. Hosted on Netlify.
+
+## Features
+- Voice-driven task management (create, edit, delete, mark as done)
+- Break down tasks into subtasks using AI
+- Estimate completion time for tasks/subtasks using AI
+- All data stored in Airtable
+- Voice feedback for every action (using OpenAI TTS)
+
+## Tech Stack
+- Next.js (React, TypeScript, TailwindCSS)
+- OpenAI Whisper API (speech-to-text)
+- OpenAI GPT-3.5 API (intent parsing)
+- OpenAI TTS API (text-to-speech)
+- Airtable REST API (database)
+- Hosted on Netlify
+
+## Setup Instructions
+
+### 1. Clone the repository
+```bash
+git clone <repo-url>
+cd adhd-voice-assistant
+```
+
+### 2. Install dependencies
+```bash
+npm install
+```
+
+### 3. Set up environment variables
+Create a `.env.local` file in the root directory with the following:
+
+```
+NEXT_PUBLIC_OPENAI_API_KEY=your_openai_api_key
+NEXT_PUBLIC_AIRTABLE_API_KEY=your_airtable_api_key
+NEXT_PUBLIC_AIRTABLE_BASE_ID=your_airtable_base_id
+NEXT_PUBLIC_AIRTABLE_TABLE_NAME=tasks
+```
+
+- Get your OpenAI API key from https://platform.openai.com/account/api-keys
+- Get your Airtable API key and Base ID from https://airtable.com/api
+
+### 4. Run the development server
+```bash
+npm run dev
+```
+
+### 5. Deploy to Netlify
+- Connect your GitHub repo to Netlify
+- Set the same environment variables in the Netlify dashboard or in `netlify.toml`
+- Deploy the app
+
+### 6. Local Netlify Development (Optional)
+- Install Netlify CLI: `npm install -g netlify-cli` (or use the included dev dependency)
+- Run locally: `npm run netlify`
+
+## License
+MIT
 
 ## Getting Started
 
